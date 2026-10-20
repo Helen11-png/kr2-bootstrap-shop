@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Контакты SuperTutor: телефон, e-mail и форма обратной связи.">
+  <title>Контакты — SuperTutor</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">SuperTutor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a></li>
+          </ul>
+          <a class="btn btn-light ms-lg-3" href="order.html">Оставить заявку</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <nav aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-4">Контакты</h1>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-header fw-semibold">Как с нами связаться</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="text-body-secondary">Телефон:</span> <a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+            <li class="list-group-item"><span class="text-body-secondary">E-mail:</span> <a href="mailto:info@example.com">info@example.com</a></li>
+            <li class="list-group-item"><span class="text-body-secondary">Адрес:</span> г. Москва, учебный проект</li>
+            <li class="list-group-item"><span class="badge text-bg-success">24/7</span> Обратная связь в любое время</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <h2 class="h5 card-title">Обратная связь</h2>
+            <p class="card-text text-body-secondary">Оставьте короткую заявку в окне — мы перезвоним. Для подробной заявки используйте страницу «Заявка».</p>
+            <div class="d-grid gap-2 d-sm-flex mt-auto">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
+              <a class="btn btn-outline-primary" href="order.html">Подробная заявка</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer mt-auto py-4">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">&copy; 2026 SuperTutor. Учебный проект. Все права защищены.</p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <p class="mb-0">Дисциплина: Фронтенд и бэкенд разработка</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно заявки -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="needs-validation" novalidate>
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка на курс</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="m-name" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="m-name" name="name" minlength="2" autocomplete="given-name" placeholder="Введите ваше имя" required>
+              <div class="invalid-feedback">Введите имя (не короче 2 символов).</div>
+            </div>
+            <div class="mb-3">
+              <label for="m-phone" class="form-label">Телефон</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">Тел.</span>
+                <input type="tel" class="form-control" id="m-phone" name="phone" data-phone inputmode="tel" autocomplete="tel"
+                       placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+                <div class="invalid-feedback">Формат: +7 (900) 000-00-00</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="m-course" class="form-label">Предмет</label>
+              <select class="form-select" id="m-course" name="course" required>
+              <option value="" selected disabled>Выберите предмет</option>
+              <option value="math">Математика</option>
+              <option value="phys">Физика</option>
+              <option value="chem">Химия</option>
+              <option value="bio">Биология</option>
+              <option value="eng">Английский язык</option>
+              <option value="lit">Литература</option>
+              <option value="prog">Программирование</option>
+              <option value="fin">Финансовая грамотность</option>
+              <option value="mus">Музыка</option>
+              <option value="consultation">Консультация по выбору курса</option>
+              </select>
+              <div class="invalid-feedback">Выберите предмет.</div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="m-agree" name="agreement" required>
+              <label class="form-check-label" for="m-agree">Я согласен на обработку данных</label>
+              <div class="invalid-feedback">Необходимо согласие.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast text-bg-success" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

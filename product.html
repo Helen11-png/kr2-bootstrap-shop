@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Курс «Математика» — подготовка к ОГЭ и ЕГЭ в SuperTutor: характеристики, цена, ответы на вопросы.">
+  <title>Математика — курс в SuperTutor</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">SuperTutor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <a class="btn btn-light ms-lg-3" href="order.html">Оставить заявку</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <nav aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Математика</li>
+      </ol>
+    </nav>
+
+    <section class="row g-4 align-items-start">
+      <div class="col-12 col-lg-5">
+        <div class="position-relative">
+          <img src="images/math.jpg" class="img-fluid rounded shadow-sm w-100" alt="Математика">
+          <span class="badge text-bg-success position-absolute top-0 start-0 m-3 fs-6">Идёт набор</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7">
+        <div class="mb-2">
+          <span class="badge text-bg-warning me-1">Популярное</span>
+          <span class="badge text-bg-light border me-1">Онлайн</span>
+          <span class="badge text-bg-light border me-1">Индивидуально</span>
+        </div>
+        <h1 class="mb-3">Математика</h1>
+        <p class="text-body-secondary">Курс для тех, кто хочет закрыть пробелы в школьной программе и уверенно сдать экзамен. Разбираем теорию, решаем реальные варианты ОГЭ и ЕГЭ, отрабатываем типичные ошибки.</p>
+        <p class="display-6 fw-bold mb-1">1200 ₽ <small class="fs-6 fw-normal text-body-secondary">/ академ. час</small></p>
+        <div class="alert alert-success py-2 my-3" role="status">Есть свободные места</div>
+        <div class="d-grid gap-2 d-sm-flex">
+          <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#orderModal" data-course="math">Записаться</button>
+          <a class="btn btn-outline-primary btn-lg" href="order.html?course=math">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Вкладки -->
+    <section class="mt-5" aria-label="Информация о курсе">
+      <ul class="nav nav-tabs" id="courseTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-about" data-bs-toggle="tab" data-bs-target="#pane-about" type="button" role="tab" aria-controls="pane-about" aria-selected="true">Описание</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-specs" data-bs-toggle="tab" data-bs-target="#pane-specs" type="button" role="tab" aria-controls="pane-specs" aria-selected="false">Характеристики</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-program" data-bs-toggle="tab" data-bs-target="#pane-program" type="button" role="tab" aria-controls="pane-program" aria-selected="false">Программа</button>
+        </li>
+      </ul>
+      <div class="tab-content border border-top-0 rounded-bottom p-3 p-md-4" id="courseTabsContent">
+        <div class="tab-pane fade show active" id="pane-about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
+          <p class="mb-0">Курс для тех, кто хочет закрыть пробелы в школьной программе и уверенно сдать экзамен. Разбираем теорию, решаем реальные варианты ОГЭ и ЕГЭ, отрабатываем типичные ошибки. Программа подбирается под текущий уровень ученика после пробного занятия.</p>
+        </div>
+        <div class="tab-pane fade" id="pane-specs" role="tabpanel" aria-labelledby="tab-specs" tabindex="0">
+          <div class="table-responsive">
+            <table class="table table-striped mb-0">
+              <caption class="visually-hidden">Характеристики курса</caption>
+              <thead>
+                <tr><th scope="col">Параметр</th><th scope="col">Значение</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Предмет</td><td>Математика</td></tr>
+                <tr><td>Формат</td><td>Онлайн, индивидуально</td></tr>
+                <tr><td>Уровень</td><td>7–11 класс, подготовка к ОГЭ и ЕГЭ</td></tr>
+                <tr><td>Длительность занятия</td><td>60 минут</td></tr>
+                <tr><td>Наличие мест</td><td>Есть свободные места</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pane-program" role="tabpanel" aria-labelledby="tab-program" tabindex="0">
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Пробное занятие и определение уровня ученика</li>
+            <li class="list-group-item">Разбор теории по темам школьной программы</li>
+            <li class="list-group-item">Решение реальных вариантов ОГЭ и ЕГЭ</li>
+            <li class="list-group-item">Отработка типичных ошибок</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Похожие курсы -->
+    <section class="mt-5" aria-labelledby="similarTitle">
+      <h2 class="h4 mb-3" id="similarTitle">Другие курсы</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm course-card">
+            <img src="images/phys.jpg" class="card-img-top" alt="Физика" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2"><span class="badge text-bg-warning me-1">Популярное</span></div>
+              <h3 class="card-title h5">Физика</h3>
+              <p class="card-text text-body-secondary">Этот курс познакомит вас с основными законами на уровне ЕГЭ по физике.</p>
+              <p class="fs-5 fw-semibold mt-auto mb-3">1200 ₽ <small class="fw-normal text-body-secondary">/ академ. час</small></p>
+              <div class="d-grid gap-2 d-sm-flex">
+                <button type="button" class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#orderModal" data-course="phys">Заказать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm course-card">
+            <img src="images/chem.jpg" class="card-img-top" alt="Химия" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2"><span class="badge text-bg-warning me-1">Популярное</span></div>
+              <h3 class="card-title h5">Химия</h3>
+              <p class="card-text text-body-secondary">Подготовка к ОГЭ с нуля!</p>
+              <p class="fs-5 fw-semibold mt-auto mb-3">1100 ₽ <small class="fw-normal text-body-secondary">/ академ. час</small></p>
+              <div class="d-grid gap-2 d-sm-flex">
+                <button type="button" class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#orderModal" data-course="chem">Заказать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 shadow-sm course-card">
+            <img src="images/bio.jpg" class="card-img-top" alt="Биология" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <div class="mb-2"><span class="badge text-bg-light border me-1">Онлайн</span></div>
+              <h3 class="card-title h5">Биология</h3>
+              <p class="card-text text-body-secondary">Подготовка к ОГЭ и ЕГЭ по биологии: от основ до сложных тем.</p>
+              <p class="fs-5 fw-semibold mt-auto mb-3">1100 ₽ <small class="fw-normal text-body-secondary">/ академ. час</small></p>
+              <div class="d-grid gap-2 d-sm-flex">
+                <button type="button" class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#orderModal" data-course="bio">Заказать</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer mt-auto py-4">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">&copy; 2026 SuperTutor. Учебный проект. Все права защищены.</p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <p class="mb-0">Дисциплина: Фронтенд и бэкенд разработка</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно заявки -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form class="needs-validation" novalidate>
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="orderModalLabel">Быстрая заявка на курс</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="m-name" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="m-name" name="name" minlength="2" autocomplete="given-name" placeholder="Введите ваше имя" required>
+              <div class="invalid-feedback">Введите имя (не короче 2 символов).</div>
+            </div>
+            <div class="mb-3">
+              <label for="m-phone" class="form-label">Телефон</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">Тел.</span>
+                <input type="tel" class="form-control" id="m-phone" name="phone" data-phone inputmode="tel" autocomplete="tel"
+                       placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+                <div class="invalid-feedback">Формат: +7 (900) 000-00-00</div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="m-course" class="form-label">Предмет</label>
+              <select class="form-select" id="m-course" name="course" required>
+              <option value="" selected disabled>Выберите предмет</option>
+              <option value="math">Математика</option>
+              <option value="phys">Физика</option>
+              <option value="chem">Химия</option>
+              <option value="bio">Биология</option>
+              <option value="eng">Английский язык</option>
+              <option value="lit">Литература</option>
+              <option value="prog">Программирование</option>
+              <option value="fin">Финансовая грамотность</option>
+              <option value="mus">Музыка</option>
+              <option value="consultation">Консультация по выбору курса</option>
+              </select>
+              <div class="invalid-feedback">Выберите предмет.</div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="m-agree" name="agreement" required>
+              <label class="form-check-label" for="m-agree">Я согласен на обработку данных</label>
+              <div class="invalid-feedback">Необходимо согласие.</div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast text-bg-success" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

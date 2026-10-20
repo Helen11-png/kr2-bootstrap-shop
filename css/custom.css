@@ -1,0 +1,131 @@
+/*
+  custom.css — минимальные правки поверх Bootstrap.
+  Подключается ПОСЛЕ bootstrap.min.css, поэтому переопределяет его стили.
+  Палитра взята из КР №1 (SuperTutor).
+*/
+
+:root {
+  --brand: #3d665a;
+  --brand-dark: #2f5046;
+  --brand-accent: #768c67;
+  --brand-cream: #fff5dc;
+
+  /* Цвет ссылок и фокуса под фирменный */
+  --bs-link-color: var(--brand);
+  --bs-link-color-rgb: 61, 102, 90;
+  --bs-link-hover-color: var(--brand-dark);
+  --bs-link-hover-color-rgb: 47, 80, 70;
+  --bs-primary: var(--brand);
+  --bs-primary-rgb: 61, 102, 90;
+}
+
+/* Фон шапки */
+.bg-brand {
+  background-color: var(--brand) !important;
+}
+
+/* Основная кнопка и её контурный вариант в фирменном цвете */
+.btn-primary {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+  --bs-btn-disabled-bg: var(--brand);
+  --bs-btn-disabled-border-color: var(--brand);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+}
+
+.text-bg-primary {
+  background-color: var(--brand) !important;
+}
+
+/* Активный пункт меню */
+.navbar .nav-link.active {
+  color: var(--brand-cream);
+  font-weight: 600;
+}
+
+/* Hero-блок */
+.hero {
+  background: var(--brand) ;
+  color: var(--brand-cream);
+}
+
+/* Карточки курсов: одинаковые пропорции картинок и лёгкий подъём при наведении */
+.course-card .card-img-top {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.course-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Слайды карусели: единая высота */
+#heroCarousel .carousel-item img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+#heroCarousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  left: 10%;
+  right: 10%;
+  bottom: 2.5rem;
+}
+
+/* Подвал */
+.site-footer {
+  background-color: var(--brand-dark);
+  color: var(--brand-cream);
+}
+
+/* Accordion и вкладки в фирменном цвете */
+.accordion {
+  --bs-accordion-active-color: var(--brand-dark);
+  --bs-accordion-active-bg: #e8f0ec;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(61, 102, 90, 0.25);
+}
+
+.nav-tabs {
+  --bs-nav-tabs-link-active-color: var(--brand-dark);
+}
+
+/* Фокус на полях формы */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 0.25rem rgba(61, 102, 90, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+/* Неактивные пункты меню чуть контрастнее (по умолчанию у Bootstrap ~55% прозрачности) */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--brand-cream);
+}

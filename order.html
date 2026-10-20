@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Оставьте заявку на курс SuperTutor — мы подберём репетитора или курс под ваш предмет.">
+  <title>Заявка на курс — SuperTutor</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand sticky-top" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">SuperTutor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+          </ul>
+          <a class="btn btn-light ms-lg-3" href="order.html">Оставить заявку</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <nav aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Заявка</li>
+      </ol>
+    </nav>
+
+    <h1 class="mb-2">Оставить заявку</h1>
+    <p class="text-body-secondary mb-4">Заполните форму — мы свяжемся с вами и подберём репетитора или курс по нужному предмету. Если вы уже выбрали курс в каталоге, укажите его в поле «Предмет».</p>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-body p-4">
+            <div class="alert alert-success d-none form-success" role="status">
+              <strong>Форма успешно отправлена!</strong> Мы свяжемся с вами в ближайшее время.
+            </div>
+            <form class="needs-validation" id="orderForm" novalidate>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label for="order-name" class="form-label">Имя</label>
+                  <input type="text" class="form-control" id="order-name" name="name" minlength="2" autocomplete="given-name" placeholder="Введите ваше имя" required>
+                  <div class="invalid-feedback">Введите имя (не короче 2 символов).</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="order-email" class="form-label">E-mail</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="email" class="form-control" id="order-email" name="email" autocomplete="email" placeholder="example@mail.ru" required>
+                    <div class="invalid-feedback">Введите корректный e-mail.</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="order-phone" class="form-label">Телефон</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">Тел.</span>
+                    <input type="tel" class="form-control" id="order-phone" name="phone" data-phone inputmode="tel" autocomplete="tel"
+                           placeholder="+7 (900) 000-00-00" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
+                    <div class="invalid-feedback">Формат: +7 (900) 000-00-00</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="order-date" class="form-label">Дата связи</label>
+                  <input type="date" class="form-control" id="order-date" name="date">
+                </div>
+                <div class="col-12">
+                  <label for="order-course" class="form-label">Предмет</label>
+                  <select class="form-select" id="order-course" name="course" required>
+                  <option value="" selected disabled>Выберите предмет</option>
+              <option value="math">Математика</option>
+              <option value="phys">Физика</option>
+              <option value="chem">Химия</option>
+              <option value="bio">Биология</option>
+              <option value="eng">Английский язык</option>
+              <option value="lit">Литература</option>
+              <option value="prog">Программирование</option>
+              <option value="fin">Финансовая грамотность</option>
+              <option value="mus">Музыка</option>
+              <option value="consultation">Консультация по выбору курса</option>
+                  </select>
+                  <div class="invalid-feedback">Выберите предмет.</div>
+                </div>
+                <div class="col-12">
+                  <span class="form-label d-block">Удобное время занятий</span>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="time" id="time-morning" value="morning">
+                    <label class="form-check-label" for="time-morning">Утро</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="time" id="time-day" value="day" checked>
+                    <label class="form-check-label" for="time-day">День</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="time" id="time-evening" value="evening">
+                    <label class="form-check-label" for="time-evening">Вечер</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="order-comment" class="form-label">Комментарий</label>
+                  <textarea class="form-control" id="order-comment" name="comment" rows="4" placeholder="Укажите удобное время занятий или другие пожелания"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="order-agree" name="agreement" required>
+                    <label class="form-check-label" for="order-agree">Я согласен на обработку данных</label>
+                    <div class="invalid-feedback">Необходимо согласие на обработку данных.</div>
+                  </div>
+                </div>
+                <div class="col-12 d-grid gap-2 d-sm-flex">
+                  <button type="submit" class="btn btn-primary btn-lg">Отправить заявку</button>
+                  <button type="reset" class="btn btn-outline-secondary btn-lg">Очистить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer mt-auto py-4">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">&copy; 2026 SuperTutor. Учебный проект. Все права защищены.</p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <p class="mb-0">Дисциплина: Фронтенд и бэкенд разработка</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="successToast" class="toast text-bg-success" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Заявка отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
